@@ -11,10 +11,16 @@ class loginController extends Controller
     }
 
     public function loginSubmit(Request $request){
-        $validate = $request->validate([
+        $validate = $request->validate(
+            [
                'userName' => 'required',
                'password' => 'required'
-        ]);
+            ],
+            [
+            'userName.required'=>'Enter Your User Name !',
+            'password.required'=>'Enter Your Password !'
+            ]
+    );
 
         $userName = $request->input('userName');
         $password = $request->input('password');

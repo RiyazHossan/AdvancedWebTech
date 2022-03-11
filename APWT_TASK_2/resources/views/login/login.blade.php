@@ -8,7 +8,7 @@
     <body>
     <div class = "container">
     <br><br>
-    <h1>Login Form</h1>
+    <h1>Login Page</h1>
     <form action= "{{route('login')}}" class "form-group" method = "post">
         {{csrf_field()}}
         <div class ="col-md-4 form-group">
@@ -27,6 +27,8 @@
             @enderror
         </div>
         <input type = "submit" class="btn btn-primary" value = "Login">
+        <br>
+        <br>
         Don't have an account? <a href="{{route('registration')}}">sign-up</a>
     </form>
     </div>

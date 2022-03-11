@@ -6,7 +6,7 @@
     <body>
     <div class = "container">
     <br><br>
-     <h1>Registration Form</h1>
+     <h1>Registration Page</h1>
     <form action= "{{route('registration')}}" class "form-group" method = "post">
         {{csrf_field()}}
         <div class ="col-md-4 form-group">
@@ -18,15 +18,7 @@
         </div>
 
         <div class ="col-md-4 form-group">
-            <span>Id</span>
-            <input type="text" name="id" value = "{{old('id')}}" class = "form-control"><br>
-            @error('id')
-                <span class = "text-danger">{{$message}}</span>
-            @enderror
-        </div>
-
-        <div class ="col-md-4 form-group">
-            <span>DOB</span>
+            <span>Date of Birth</span>
             <input type="date" name="dob" value = "{{old('dob')}}" class = "form-control"><br>
             @error('dob')
                 <span class = "text-danger">{{$message}}</span>
@@ -48,7 +40,7 @@
             <span class = "text-danger">{{$message}}</span>
         @enderror
         </div>
-        <input type = "submit" class="btn btn-primary" value = "Add Student">
+        <input type = "submit" class="btn btn-primary" value = "Submit">
     </form>
     </div>
     </body>
