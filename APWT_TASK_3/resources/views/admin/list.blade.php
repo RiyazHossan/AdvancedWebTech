@@ -3,8 +3,9 @@
     <table class = "table table-border">
         <tr>
             <th>Name</th>
-            <th>ID</th>
-            <th>Date of Birth</th>
+            <th>Password</th>
+            <th>Phone</th>
+            <th>Account Type</th>
         </tr>
         @foreach($users as $user)
         <tr>
