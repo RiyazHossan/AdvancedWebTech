@@ -6,7 +6,7 @@
     <body>
     <div class = "container">
     <br><br>
-     <h1>Registration Form</h1>
+     <h1>Add User</h1>
     <form action= "{{route('addUser')}}" class "form-group" method = "post">
         {{csrf_field()}}
         <div class ="col-md-4 form-group">
