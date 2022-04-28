@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post</title>
+</head>
+<body onload="load()">
+    <div class="createPart">
+        <h2>Api Post</h2>
+          <div >
+            <form method="POST" action="http://127.0.0.1:8000/api/registration">  
+            <span>Name</span>
+            <input type="text" name="name"  class = "form-control"><br><br>
+            <span>Password</span>
+            <input type="text" name="password" class = "form-control"><br><br>
+            <span>Id</span>
+            <input type="text" name="id" class = "form-control"><br><br>
+            <span>DOB</span>
+            <input type="date" name="dob" class = "form-control"><br><br>
+          <span>Phone</span>
+            <input type="text" name="phone" class = "form-control"><br><br>
+        <span>Email</span>
+        <input type="text" name="email" class = "form-control"><br><br>
+        <input type = "submit" class="btn btn-primary" value = "Add User">
+  </form>
+      <script> 
+        function load(){
+            const xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function(){
+                if (this.readyState == 4 && this.status ==200 ){
+                    var obj_arr=JSON.parse(this.responseText);
+                }
+            };
+            xhttp.open("POST","http://127.0.0.1:8000/api/registration");
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
